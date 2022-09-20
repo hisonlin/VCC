@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIN JIA XI Assignment(week2)</title>
+    <link rel="stylesheet" href="asset/style.css">
+    <!-- link to inside css file -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+    <!-- add a outside link -->
+</head>
+
+<body>
+
+    <form>
+        <img width="100" img src="asset/logo.jpg">
+        <h1>Sign up</h>
+            <h5>It's free and only takes a minute</h5>
+
+            <div class="input-container">
+                <label>First Name</label>
+            </div>
+
+            <div class="input-container1">
+                <label><input type="text" placeholder="Write your first name here"></label>
+            </div>
+
+            <div class="input-container">
+                <label>Last Name</label>
+            </div>
+
+            <div class="input-container1">
+                <input type="text" placeholder="Write your last name here">
+            </div>
+
+            <div class="input-container">
+                <label>Email</label>
+            </div>
+
+            <div class="input-container1">
+                <input type="text" placeholder="Write your email here">
+            </div>
+
+            <div class="input-container">
+                <label>Password</label>
+            </div>
+
+            <div class="input-container1">
+                <input type="password" placeholder="Write your password here">
+            </div>
+
+            <div class="input-container">
+                <label>Comfirm Password</label>
+            </div>
+
+            <div class="input-container1">
+                <input type="password" placeholder="RE-write your password here">
+            </div>
+
+            <div>
+                <button id="signup-button">Sign up</button>
+            </div>
+
+            <span>By Clicking the signup button, you agree to our <a href="#">Terms & Conditions</a> and <a
+                    href="#">Privacy Policy</a></span>
+    </form>
+
+    <p id="paragraph-footer">Already have an account?<a id="login-account" href="#"> Login Here</a></p>
+
+</body>
+
+</html>
