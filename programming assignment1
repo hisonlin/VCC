@@ -108,19 +108,19 @@
             if (child >= 0) {
 
                 //Get $10 for each child they have.
-                const childBen = child * 10; 
+                const childBen = child * 10;
 
                 //Net Income of low bracket.
-                const lowNetIcome = grossIncome + childBen; 
+                const lowNetIcome = grossIncome + childBen;
 
-                alert("Gross Income = " + grossIncome + ", The tax bracket = Low, Total tax = 0, Child benefits = " + childBen + ", Net Income = " + lowNetIcome);
+                alert(`Gross Income = ${grossIncome}, The tax bracket = Low, Total tax = 0, Child benefits = ${childBen}, Net Income = ${lowNetIcome}`);
 
             }
-            
+
             else {
 
                 //User doesnt type in a number get 0 child benefit.
-                alert("Gross Income = " + grossIncome + ", The tax bracket = Low, Total tax = 0, Child benefits = 0, Net Income = " + grossIncome);
+                alert(`Gross Income = ${grossIncome}, The tax bracket = Low, Total tax = 0, Child benefits = 0, Net Income = ${grossIncome}`);
 
             }
         }
@@ -129,13 +129,13 @@
         //Mid tax bracket
         else if (grossIncome > 500 && grossIncome <= 700) {
 
-           //Tax rate is 15% of any sum that is over 500 but less than or equal to 700.
-            const midTax = (grossIncome - 500) * 0.15; 
+            //Tax rate is 15% of any sum that is over 500 but less than or equal to 700.
+            const midTax = (grossIncome - 500) * 0.15;
 
             //Net Income of mid bracket.
-            const midNetIncome = parseInt(grossIncome - midTax); 
+            const midNetIncome = parseInt(grossIncome - midTax);
 
-            alert("Gross Income = " + grossIncome + ", The tax bracket = Medium, Total tax = " + midTax + ", Child benefits = 0, Net Income = " + midNetIncome);
+            alert(`Gross Income = ${grossIncome}, The tax bracket = Medium, Total tax = ${midTax}, Child benefits = 0, Net Income = ${midNetIncome}`);
 
         }
 
@@ -144,7 +144,7 @@
         else if (grossIncome > 700) {
 
             //Tax rate is 15% of any sum that is over 500 but less than or equal to 700.
-            const before700Tax = (700-500)*0.15;
+            const before700Tax = (700 - 500) * 0.15;
 
             //Tax rate is 25% of any sum that is over 700.
             const after700Tax = (grossIncome - 700) * 0.25;
@@ -155,7 +155,7 @@
             //Net income of high bracket.
             const hightNetIncome = grossIncome - totalTax;
 
-            alert("Gross Income = " + grossIncome + ", The tax bracket = High, Total tax = " + totalTax + ", Child benefits = 0, Net Icnome = " + hightNetIncome);
+            alert(`Gross Income = ${grossIncome}, The tax bracket = High, Total tax = ${totalTax}, Child benefits = 0, Net Icnome = ${hightNetIncome}`);
             //I have no idea for why the exmaple in Q1 gross income 900 returns in net income 820.15. I think it is a wrong example.
         }
 
@@ -196,26 +196,20 @@
 
         const length = name.length - 1; //Not include a space, so result-1.
         const firstLetter = name.charAt(0); //First letter of the name.
-        const firstLetterLow = firstLetter.toLowerCase(); //In case, users type in their name that the first letter is upper case.
+        const firstLetterUp = firstLetter.toUpperCase(); //In case, users type in their name that the first letter is lower case.
         const lastLetter = name.charAt(name.length - 1); //Last letter of the name.
 
         //Situation 1) Vowel.
-        if (firstLetterLow == "a" || firstLetterLow == "e" || firstLetterLow == "i" || firstLetterLow == "o" || firstLetterLow == "u") {
+        if (firstLetterUp == "A" || firstLetterUp == "E" || firstLetterUp == "I" || firstLetterUp == "O" || firstLetterUp == "U") {
 
-            alert("Hello " + name + ".\n" +
-                  "Your name is " + length + " letters long.\n" +
-                  "Your name begins with a vowel which is the letter " + firstLetter + ".\n" +
-                  "The last letter of your name is " + lastLetter + ".");
+            alert(`Hello ${name}.\n Your name is ${length} letters long.\n Your name begins with a vowel which is the letter ${firstLetterUp}.\n The last letter of your name is ${lastLetter.toLowerCase()}.`);
 
         }
 
         //Situation 2) Consonant.
         else {
 
-            alert("Hello " + name + ".\n" +
-                  "Your name is " + length + " letters long.\n" +
-                  "Your name begins with a consonant which is the letter " + firstLetter + ".\n" +
-                  "The last letter of your name is " + lastLetter + ".");
+           alert(`Hello ${name}.\n Your name is ${length} letters long.\n Your name begins with a consonant which is the letter ${firstLetterUp}.\n The last letter of your name is ${lastLetter.toLowerCase()}.`);
 
         }
 
